@@ -108,7 +108,7 @@ class LaptopsInsert extends Component {
           onChange={this.handleChangeInputQuantity}
         />
 
-        <Button onClick={this.handleIncludeMovie}>Add Laptop</Button>
+        <Button onClick={this.handleIncludeLaptop}>Add Laptop</Button>
         <CancelButton href={"/laptops/list"}>Cancel</CancelButton>
       </Wrapper>
     );

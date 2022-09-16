@@ -7,8 +7,8 @@ const api = axios.create({
 export const insertLaptop = payload => api.post(`/laptop`, payload)
 export const getAllLaptops = () => api.get(`/laptops`)
 export const updateLaptopById = (id, payload) => api.put(`/laptop/${id}`, payload)
-export const deleteLaptopById = id => api.delete(`/laptop/${id}`)
-export const getLaptopById = id => api.get(`/laptop/${id}`)
+export const deleteLaptopById = id => api.delete(`/laptops/${id}`)
+export const getLaptopById = id => api.get(`/laptops/${id}`)
 
 const apis = {
     insertLaptop,
