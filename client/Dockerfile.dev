@@ -1,0 +1,21 @@
+# Build stage
+FROM node:18-alpine3.15
+
+# Setting Working Directory
+WORKDIR /app
+
+# Copying only package.json
+COPY package*.json ./
+
+# Install Dependencies
+RUN npm install
+
+# Copy rest of the code to container
+COPY . ./
+
+RUN npm run build
+
+EXPOSE 3010
+
+# Run the React app
+CMD ["npm", "start"]
